@@ -52,3 +52,25 @@ A collection of Data Structures and Algorithms problems with solutions and optim
   - After processing all prime factors, if the result is 1, then the number only has 2, 3, and 5 as prime factors (ugly number)
   - If the result is not 1, the number has other prime factors and is not ugly
 - **Optimization:** Time complexity is O(log n) since we're dividing the number repeatedly. Space complexity is O(1) as we only use a constant amount of extra space.
+
+### 5. Valid Parenthesis
+- **Problem Statement:** Determine if a string containing just the characters '(', ')', '{', '}', '[' and ']' is valid. A valid string satisfies: every opening bracket has a corresponding closing bracket of the same type, and brackets are closed in the correct order.
+- **Approach:** Stack-based validation:
+  - Iterate through each character in the string
+  - If the character is an opening bracket ('(', '{', '['), push it onto the stack
+  - If the character is a closing bracket (')', '}', ']'):
+    - Check if the stack is empty; if so, return False (no matching opening bracket)
+    - Pop the top element from the stack and verify it matches the closing bracket type
+    - If it doesn't match, return False
+  - After processing all characters, the stack should be empty for a valid string
+- **Optimization:** Time complexity is O(n) for iterating through the string once. Space complexity is O(n) in the worst case when all characters are opening brackets.
+
+### 6. Palindrome Number
+- **Problem Statement:** Determine if an integer is a palindrome. A number is a palindrome if it reads the same forwards and backwards. Negative numbers are not palindromes.
+- **Approach:** String Conversion Method:
+  - Handle negative numbers: return False immediately (negative numbers cannot be palindromes)
+  - Convert the integer to a string
+  - Find the midpoint of the string
+  - Compare the first half with the reverse of the second half
+  - If they match, the number is a palindrome
+- **Optimization:** Time complexity is O(log n) where n is the number (since the number of digits is proportional to log n). Space complexity is O(log n) to store the string representation of the number.
