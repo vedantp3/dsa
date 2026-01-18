@@ -12,6 +12,8 @@ A collection of Data Structures and Algorithms problems with solutions and optim
 | 2 | Maximum Count of Positive Integer and Negative Integer | Find the maximum count between positive and negative numbers in a sorted array containing 0s, positive, and negative numbers | Binary Search - Use two binary searches to find the boundary between negatives and positives, then calculate counts and return the maximum | O(log n) | O(1) |
 | 3 | Happy Number | Determine if a number is a happy number (repeatedly replace the number by the sum of squares of its digits until it becomes 1 or enters a cycle) | Hash Set with Cycle Detection - Track seen numbers and repeatedly calculate sum of squares of digits; return True if reaches 1, False if cycle detected | O(log n) | O(1) |
 | 4 | Ugly Number | Determine if a number is an ugly number (has only prime factors 2, 3, and 5) | Prime Factorization - Divide the number by 2, 3, and 5 repeatedly; if result is 1, it's an ugly number | O(log n) | O(1) |
+| 5 | Valid Parenthesis | Determine if a string containing parentheses is valid (every opening bracket has a closing bracket and they are in the correct order) | Stack - Use a stack to track opening brackets and match them with closing brackets | O(n) | O(n) |
+| 6 | Palindrome Number | Determine if an integer is a palindrome without converting it to a string (alternative: convert to string and compare) | String Conversion - Convert the number to a string, split it in half, and check if the first half matches the reverse of the second half | O(log n) | O(log n) |
 
 ---
 
